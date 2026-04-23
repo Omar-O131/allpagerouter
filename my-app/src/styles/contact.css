@@ -1,0 +1,342 @@
+:root {
+  font-family: "Manrope", sans-serif;
+  color: #2e2730;
+  background: #fff;
+  --accent: #533b4d;
+  --accent-strong: #3f2938;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Manrope", sans-serif;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  aspect-ratio: 2560 / 581;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(1240px, calc(100% - 24px));
+  margin: 0 auto;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(98, 0, 53, 0.08);
+}
+
+.page-title-section,
+.contact-section {
+  width: min(1140px, calc(100% - 44px));
+  margin: 0 auto;
+}
+
+.page-title-section {
+  padding-top: 34px;
+}
+
+.page-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title-wrap h1 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: clamp(1.85rem, 3.2vw, 2.4rem);
+  line-height: 1.2;
+  color: #111;
+}
+
+.contact-section {
+  margin-top: 26px;
+  margin-bottom: 72px;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(280px, 0.72fr);
+  gap: 54px;
+  align-items: start;
+}
+
+.form-panel {
+  padding: 0;
+}
+
+.info-panel {
+  padding: 6px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-panel h2,
+.info-panel h2 {
+  margin: 0 0 18px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+  color: var(--accent-strong);
+}
+
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form span,
+.contact-label {
+  font-size: 1rem;
+  color: #3a3037;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 700;
+}
+
+.contact-form abbr {
+  text-decoration: none;
+  color: #8f2f45;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #ddd6d1;
+  border-radius: 0;
+  background: #fff;
+  padding: 13px 15px;
+  color: #2e2730;
+  outline: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.field-error {
+  color: #ff1f1f;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.contact-form .is-invalid {
+  border-color: #ff1f1f;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(83, 59, 77, 0.45);
+  box-shadow: 0 0 0 3px rgba(196, 158, 177, 0.12);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 210px;
+  background: #f5f5f5;
+}
+
+.skew-button {
+  justify-self: start;
+  margin-top: 4px;
+  border: 0;
+  background: #db2e31;
+  color: #fff;
+  padding: 0;
+  transform: skewX(-12deg);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+  box-shadow: none;
+}
+
+.skew-button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  color: inherit;
+  transform: skewX(12deg);
+  letter-spacing: 0;
+}
+
+.skew-button:hover {
+  background: #000;
+}
+
+.info-group p,
+.contact-value {
+  margin: 0;
+  color: #433744;
+  line-height: 1.7;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-item {
+  padding: 0;
+  border: 0;
+}
+
+.contact-label {
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+
+.contact-value a {
+  color: var(--accent);
+}
+
+.inline-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.social-pill {
+  width: 39px;
+  height: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background: #2d5f93;
+  color: #fff;
+  border: 0;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.social-pill[aria-label="WhatsApp"] {
+  background: #1ec94c;
+}
+
+.social-pill:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.94);
+}
+
+.social-pill svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+@media (max-width: 920px) {
+  .section-grid,
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    width: min(100% - 28px, 1140px);
+    margin-top: 34px;
+  }
+
+  .page-title-section {
+    width: min(100% - 28px, 1140px);
+    padding-top: 24px;
+  }
+
+  .info-panel {
+    padding: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    width: min(100% - 20px, 1140px);
+  }
+
+  .page-title-section {
+    width: min(100% - 20px, 1140px);
+  }
+
+  .hero {
+    aspect-ratio: 2048 / 465;
+    width: min(100% - 16px, 1240px);
+  }
+
+  .skew-button {
+    width: min(100%, 220px);
+    justify-self: start;
+  }
+
+  .skew-button span {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 18px;
+  }
+}

@@ -1,0 +1,298 @@
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --section-bg: #ffffff;
+  --title-bg: #f5f5f5;
+  --text: #222222;
+  --muted: #666666;
+  --line: #e5e5e5;
+  --feature-card-bg: #273447;
+  --feature-card-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Manrope", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.page-shell {
+  padding-bottom: 0;
+}
+
+.content-page {
+  width: min(1180px, calc(100% - 1.5rem));
+  margin: 0 auto;
+}
+
+.content-page > *:first-child {
+  margin-top: 0;
+}
+
+.page-title-band {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background:
+    linear-gradient(rgba(117, 0, 36, 0.08), rgba(117, 0, 36, 0.08)),
+    url("/image/about-banner-scaled.webp") center / cover no-repeat;
+  margin-top: 0;
+}
+
+.page-title-inner {
+  position: relative;
+  width: min(1180px, calc(100% - 1.5rem));
+  margin: 0 auto;
+  min-height: 430px;
+}
+
+.page-title-band h1,
+.intro-copy h2,
+.story-copy h2 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+
+.page-title-band h1 {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.4rem, 4vw, 3.35rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.content-section {
+  margin-top: 28px;
+}
+
+.features-section {
+  background: #ffffff;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.intro-copy h2,
+.story-copy h2 {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 1.2;
+}
+
+.intro-copy h2 strong {
+  font-weight: 700;
+}
+
+.intro-copy {
+  display: flex;
+  align-items: center;
+  min-height: 175px;
+  padding: 0;
+}
+
+.intro-copy h2 {
+  max-width: 270px;
+  color: #111111;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 175px;
+  padding: 22px 16px 18px;
+  background: var(--feature-card-bg);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 16px;
+  color: var(--feature-card-text);
+}
+
+.feature-svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.feature-card h3 {
+  margin: 0 0 12px;
+  color: var(--feature-card-text);
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feature-card p,
+.story-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.feature-card p {
+  color: var(--feature-card-text);
+  font-size: 0.63rem;
+  font-weight: 700;
+  line-height: 1.45;
+  max-width: 190px;
+  margin: 0 auto;
+}
+
+.story-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.story-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.story-media img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+.brands-section {
+  padding-top: 8px;
+}
+
+.brand-marquee {
+  overflow: visible;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+}
+
+.brand-track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 18px 28px;
+  width: 100%;
+}
+
+.brand-pill {
+  padding: 0;
+  white-space: nowrap;
+  font-size: 0.97rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .page-title-inner {
+    min-height: 300px;
+  }
+
+  .page-title-band h1 {
+    left: 56%;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .intro-copy {
+    grid-column: 1 / -1;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .intro-copy h2 {
+    max-width: none;
+  }
+
+  .story-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .content-page,
+  .page-title-inner {
+    width: min(100% - 1rem, 1180px);
+  }
+
+  .page-title-inner {
+    min-height: 210px;
+  }
+
+  .page-title-band h1 {
+    top: 50%;
+    left: 50%;
+    font-size: 1.9rem;
+  }
+
+  .content-section {
+    margin-top: 20px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .brand-track {
+    justify-content: center;
+  }
+}
